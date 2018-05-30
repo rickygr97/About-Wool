@@ -7487,10 +7487,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 48195353}
   dialoguestring:
-  - hallo
-  - doei
-  secbetweencharacter: 0.15
-  begin: {fileID: 458733708}
+  - hallo het is tijd voor je training kadet
+  - je eerste doel is om door elke ringen heen te vliegen tewijl je de targets schiet
+    doe je best
+  secbetweencharacter: 0.05
 --- !u!114 &2048224515
 MonoBehaviour:
   m_ObjectHideFlags: 0

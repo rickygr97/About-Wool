@@ -25,11 +25,11 @@ public class Dialogue : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && stop)
+        if (Input.GetKeyDown(KeyCode.E) && stop && dialoguechange < dialoguestring.Length)
         {
             StartCoroutine(displaytext(dialoguestring[dialoguechange]));
         }
-        if (_textcom.text == "doei")
+        if (Input.GetKeyDown(KeyCode.E) && _textcom.text == "je eerste doel is om door elke ringen heen te vliegen tewijl je de targets schiet doe je best")
         {
             panel.SetActive(false);
             _textcom.text = "";
