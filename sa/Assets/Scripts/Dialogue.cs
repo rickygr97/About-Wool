@@ -11,12 +11,15 @@ public class Dialogue : MonoBehaviour {
     public float secbetweencharacter = 0.15f;
     private int dialoguechange = 0;
     bool stop = true;
+   private begingame begin;
+
 
     // Use this for initialization
     void Start()
     {
         _textcom = GetComponent<Text>();
         _textcom.text = "";
+        begin = FindObjectOfType<begingame>();
     }
 
     // Update is called once per frame
@@ -30,18 +33,17 @@ public class Dialogue : MonoBehaviour {
         {
             panel.SetActive(false);
             _textcom.text = "";
+            begin.ContinueGame();
         }
        // else if () { panel.SetActive(true); }
     }
     private IEnumerator displaytext(string texttodisplay)
     {
-        Time.timeScale = 0;
         int textlenght = texttodisplay.Length;
         int currentcharacterindex = 0;
         _textcom.text = "";
         while (currentcharacterindex < textlenght)
         {
-            Time.timeScale = 1;
             _textcom.text += texttodisplay[currentcharacterindex];
             currentcharacterindex++;
             if (currentcharacterindex < textlenght)

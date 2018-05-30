@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class begingame : MonoBehaviour {
 
+    public GameObject plane;
 
     public GUIText text;
 
@@ -16,7 +17,7 @@ public class begingame : MonoBehaviour {
     void Start()
     {
 
-      //  PauseGame();
+        PauseGame();
         
 
     }
@@ -31,24 +32,25 @@ public class begingame : MonoBehaviour {
 
     private void PauseGame()
     {
-        Time.timeScale = 0;
-        
+      //  Time.timeScale = 0;
+
         //Disable scripts that still work while timescale is set to 0  
-       
-       
-       
+
+
+        plane.GetComponent<AirPlane>().enabled =(false);
+
         
         Cursor.visible = true;
     }
-    private void ContinueGame()
+    public void ContinueGame()
     {
-        Time.timeScale = 1;
-        
+        //   Time.timeScale = 1;
+
         //enable the scripts again
-        
-        
-        
-       
+
+        plane.GetComponent<AirPlane>().enabled = (true);
+
+
         Cursor.visible = false;
     }
 }
