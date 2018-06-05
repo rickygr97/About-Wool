@@ -37,7 +37,7 @@ public class begingame : MonoBehaviour {
         //Disable scripts that still work while timescale is set to 0  
 
 
-        plane.GetComponent<AirPlane>().enabled =(false);
+        plane.GetComponent<AirPlane>().enabled = (false);
 
         
         Cursor.visible = true;

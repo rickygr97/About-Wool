@@ -29,7 +29,7 @@ public class Dialogue : MonoBehaviour {
         {
             StartCoroutine(displaytext(dialoguestring[dialoguechange]));
         }
-        if (Input.GetKeyDown(KeyCode.E) && _textcom.text == "je eerste doel is om door elke ringen heen te vliegen tewijl je de targets schiet doe je best")
+        if (Input.GetKeyDown(KeyCode.E) && _textcom.text == "Je eerste doel is om door alle ringen heen te vliegen tewijl je de targets schiet, doe je best!")
         {
             panel.SetActive(false);
             _textcom.text = "";
