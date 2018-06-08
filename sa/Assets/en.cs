@@ -6,8 +6,8 @@ public class en : MonoBehaviour {
 
     public GameObject target2;
     float distance;
-    int lookradius = 200;
-    float stopradius = 100;
+    int lookradius = 20;
+    float stopradius = 10;
     bool stop;
 
     bool shoot = false;
